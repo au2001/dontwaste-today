@@ -10,7 +10,7 @@ export const logPopupTap = async (screen, title, text, image) => {
       image,
     });
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };
 
@@ -21,7 +21,7 @@ export const reasonTap = async (reason) => {
       reason,
     });
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };
 
@@ -32,7 +32,7 @@ export const openSourceOrWhyNeededTap = async () => {
       name: 'Tap opensource/why needed',
     });
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };
 
@@ -42,7 +42,7 @@ export const startCreateAccount = async () => {
       name: 'Start create account',
     });
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };
 
@@ -52,7 +52,7 @@ export const finishCreateAccount = async () => {
       name: 'Finish create account',
     });
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };
 
@@ -62,7 +62,7 @@ export const startNowTap = async () => {
       name: 'Tap start now',
     });
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };
 
@@ -75,6 +75,6 @@ export const firstAnswerAfterFirstNotification = async () => {
       },
     );
   } catch (e) {
-    console.log('Unable to log analytics event:', e);
+    console.error('Unable to log analytics event:', e);
   }
 };

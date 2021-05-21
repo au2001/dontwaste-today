@@ -75,10 +75,10 @@ const Login = () => {
           dispatch(login(user));
         })
         .catch((error) => {
-          console.log(error);
+          console.error(error);
         });
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -122,7 +122,7 @@ const Login = () => {
             dispatch(login(user));
           })
           .catch((error) => {
-            console.log(error);
+            console.error(error);
           });
       } else {
         // handle this - retry?

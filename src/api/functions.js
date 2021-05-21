@@ -14,5 +14,5 @@ export const getReasonsCount = (start = null, end = null) =>
       return [];
     })
     .catch((error) => {
-      console.log('Error', error);
+      console.error('Error', error);
     });

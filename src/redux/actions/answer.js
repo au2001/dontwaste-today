@@ -51,13 +51,13 @@ export const fetchAnswers = () => (dispatch) => {
         },
         (error) => {
           dispatch(setLoading(false));
-          console.log('Error fetching answers onSnapshot: ', error);
+          console.error('Error fetching answers onSnapshot: ', error);
         },
       );
     unsubscribers.push(answerUnsubscriber);
   } catch (error) {
     dispatch(setLoading(false));
-    console.log('Error fetching answers: ', error);
+    console.error('Error fetching answers: ', error);
   }
 };
 
@@ -80,13 +80,13 @@ export const fetchCounters = () => (dispatch) => {
         },
         (error) => {
           dispatch(setLoading(false));
-          console.log('Error fetching counters onSnapshot: ', error);
+          console.error('Error fetching counters onSnapshot: ', error);
         },
       );
     unsubscribers.push(countersUnsubscriber);
   } catch (error) {
     dispatch(setLoading(false));
-    console.log('Error fetching counters: ', error);
+    console.error('Error fetching counters: ', error);
   }
 };
 
@@ -116,13 +116,13 @@ export const fetchHistory = () => (dispatch) => {
         },
         (error) => {
           dispatch(setLoading(false));
-          console.log('Error fetching history onSnapshot: ', error);
+          console.error('Error fetching history onSnapshot: ', error);
         },
       );
     unsubscribers.push(historyUnsubscriber);
   } catch (error) {
     dispatch(setLoading(false));
-    console.log('Error fetching history: ', error);
+    console.error('Error fetching history: ', error);
   }
 };
 

@@ -26,7 +26,7 @@ export const fetchSettings = () => (dispatch) => {
       });
     unsubscribers.push(usersUnsubscriber);
   } catch (error) {
-    console.log('Error fetching settings: ', error);
+    console.error('Error fetching settings: ', error);
   }
 };
 

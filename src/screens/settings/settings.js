@@ -49,7 +49,7 @@ const Settings = ({ settings, setSettings }) => {
       auth()
         .signOut()
         .catch((error) => {
-          console.log(error);
+          console.error(error);
         });
       dispatch(logout());
       // setuserInfo([]);

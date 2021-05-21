@@ -26,22 +26,22 @@ export default () => {
   PushNotification.configure({
     // (optional) Called when Token is generated (iOS and Android)
     onRegister(token) {
-      console.log('TOKEN:', token);
+      console.debug('TOKEN:', token);
     },
 
     // (required) Called when a remote is received or opened, or local notification is opened
     onNotification(notification) {
-      console.log('NOTIFICATION:', notification);
+      console.debug('NOTIFICATION:', notification);
 
       // process the notification
 
       // ------------------------------------ Funnel ------------------------------------
       getIsFirstNotification().then((isFirstNotification) => {
         if (isFirstNotification) {
-          console.log('IT IS FIRST NOTIFICATION');
+          console.debug('IT IS FIRST NOTIFICATION');
           store.dispatch(firstNotification(false));
         } else {
-          console.log('not first notification');
+          console.debug('not first notification');
         }
       });
       // ------------------------------------ Funnel ------------------------------------
@@ -52,8 +52,8 @@ export default () => {
 
     // (optional) Called when Registered Action is pressed and invokeApp is false, if true onNotification will be called (Android)
     onAction(notification) {
-      console.log('ACTION selected:', notification.action);
-      console.log('NOTIFICATION:', notification);
+      console.debug('ACTION selected:', notification.action);
+      console.debug('NOTIFICATION:', notification);
 
       // process the action
       if (notification.action === 'Yes') {
@@ -100,6 +100,6 @@ export default () => {
       importance: 4, // (optional) default: 4. Int value of the Android notification importance
       vibrate: true, // (optional) default: true. Creates the default vibration patten if true.
     },
-    (created) => console.log(`createChannel returned '${created}'`), // (optional) callback returns whether the channel was created, false means it already existed.
+    (created) => console.debug(`createChannel returned '${created}'`), // (optional) callback returns whether the channel was created, false means it already existed.
   );
 };

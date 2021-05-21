@@ -87,7 +87,7 @@ const getNextNotificationTime = async () => {
       // Get difference in milliseconds from calculated time and now
       const nextNotificationTime = calculatedDateTime.diff(moment());
       console.log(
-        `You  will be asked again in: ${Math.floor(
+        `You will be asked again in: ${Math.floor(
           nextNotificationTime / 60000,
         )} minutes`,
       );
@@ -110,7 +110,7 @@ const getNextNotificationTime = async () => {
     // Get difference in milliseconds from calculated time and now
     const nextNotificationTime = nextAvailableDateTime.diff(moment());
     console.log(
-      `You  will be asked next time at: ${Math.floor(
+      `You will be asked next time at: ${Math.floor(
         nextNotificationTime / 60000,
       )} minutes`,
     );
