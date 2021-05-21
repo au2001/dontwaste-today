@@ -8,4 +8,6 @@ target 'procrastinationExpoRN' do
   config = use_native_modules!
   use_unimodules!
   use_react_native!(:path => config["reactNativePath"])
+
+  $RNFirebaseAnalyticsWithoutAdIdSupport=true
 end
