@@ -1,4 +1,4 @@
-import Moment from 'moment';
+import moment from 'moment';
 import _ from 'lodash';
 import { getVersion } from 'react-native-device-info';
 import { getRemoteValue } from './remoteConfig';
@@ -19,9 +19,9 @@ const colorScale = [
 ];
 
 export const dateTimeToUtc = (datetime = new Date()) =>
-  Moment(datetime).utc().format();
+  moment(datetime).utc().format();
 
-export const getDateTime = () => Moment().utc().format();
+export const getDateTime = () => moment().utc().format();
 
 export const getColorScale = (index) =>
   index < colorScale.length ? colorScale[index] : '#fff';
